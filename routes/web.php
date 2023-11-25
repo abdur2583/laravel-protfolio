@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,10 @@ use App\Http\Controllers\ProfileController;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
-
-Route::get("/profile/{id}", [ProfileController::class, "index"]);
-Route::get("/setCookie", [ProfileController::class, "setCookie"]);
+ */
+Route::get("/home",[PortfolioController::class,'index']);
+Route::get("/about",[PortfolioController::class,'about']);
+Route::get("/blog",[PortfolioController::class,'blog']);
+Route::get("/service",[PortfolioController::class,'services']);
+Route::get("/contact",[PortfolioController::class,'contact']);
+Route::get("/portfolio",[PortfolioController::class,'portfolio']);
